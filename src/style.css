@@ -1,0 +1,241 @@
+.top-bar-text {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    font-size: 12px;
+    color: #b1ffc0;
+}
+
+.spectrum-panel {
+    background-color: #121713;
+    height: 70%;
+}
+
+.control-panel {
+    background-color: #f2fbf4;
+}
+
+.shadow-bar {
+    height: 1px;
+    shadow: 0px 4px 48px 12px rgb(50 155 80 / 60%);
+}
+
+.knob {
+    height: 80px;
+    width: 80px;
+    shadow:
+        4px 4px 24px 4px rgb(80 123 80 / 20%),
+        -4px -4px 24px 4px white;
+    corner-radius: 48px;
+    scale: 100%;
+    transition: scale 233ms;
+    transition: shadow 233ms;
+}
+
+.knob:hover {
+    scale: 95%;
+    shadow:
+        4px 4px 24px 0px rgb(80 123 80 / 20%),
+        4px 4px 24px 0px white;
+    transition: scale 233ms;
+    transition: shadow 233ms;
+}
+
+/* Keep the hover appearance stable while the knob owns the pointer capture. Baseview/Vizia can
+ * temporarily move the hover target during a drag, so relying on :hover alone makes the outer
+ * highlight flicker. The controller removes this class on MouseUp and lets the normal hover rule
+ * take over again. */
+.knob.dragging,
+.knob.dragging:hover {
+    scale: 95%;
+    shadow:
+        4px 4px 24px 0px rgb(80 123 80 / 20%),
+        4px 4px 24px 0px white;
+    transition: scale 233ms;
+    transition: shadow 233ms;
+}
+
+.knob-macos {
+    height: 80px;
+    width: 80px;
+    corner-radius: 48px;
+}
+
+.knob-cont {
+    /*background-color: red;*/
+    height: auto;
+    width: auto;
+    gap: 10px;
+    alignment: center;
+}
+
+.params-label {
+    background-color: white;
+    color: black;
+    transition: background-color 233ms;
+    transition: color 233ms;
+}
+
+.params-label:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 233ms;
+    transition: color 233ms;
+}
+
+.waveform-view {
+    color: palegreen;
+}
+
+.ticks {
+    opacity: 0;
+}
+
+.peak-meter {
+    border-color: palegreen;
+    width: 114px;
+}
+
+.top-bar {
+    padding: 4px;
+    height: 24px;
+}
+
+.top-bar-right {
+    gap: 4px;
+    width: auto;
+}
+
+.info-btn {
+    border: 1px dashed;
+    color: palegreen;
+    height: 20px;
+    rotate: 0deg;
+    width: 20px;
+    border-color: transparent;
+    background-color: transparent;
+    transition: border-color 233ms;
+    transition: rotate 233ms;
+    transform-origin: 0px 2px;
+    translate: 0px -2px;
+}
+
+.info-btn:hover {
+    border: 1px dashed;
+    border-color: palegreen;
+    background-color: transparent;
+    alignment: center;
+    rotate: 12deg;
+    transition: border-color 233ms;
+    transition: rotate 233ms;
+}
+
+.animated-label {
+    rotate: 0deg;
+    transition: rotate 2000ms;
+}
+
+.animated-label:hover {
+    rotate: 720deg;
+    transition: rotate 2000ms;
+}
+
+.info-panel-cont {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.5);
+    position-type: absolute;
+    alignment: center;
+}
+
+.info-panel {
+    width: 500px;
+    height: 200px;
+    background-color: rgb(242 251 244 / 80%);
+    backdrop-filter: blur(24px);
+    corner-radius: 8px;
+    shadow: 2px 2px 72px 1px rgb(0 0 0 / 80%);
+    alignment: top-left;
+    padding: 12px;
+}
+
+.info-panel .h1 {
+    font-size: 24px;
+    background-color: black;
+    color: #f2fbf4;
+}
+
+.info-panel .h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.info-panel .p {
+    font-size: 12px;
+    font-weight: normal;
+    color: gray;
+}
+
+.link-btn {
+    background-color: transparent;
+    border-color: transparent;
+    color: #345534;
+}
+
+.link-btn:hover {
+    background-color: rgb(152 251 152 / 0.1);
+}
+
+.param-value-label {
+    font-size: 12px;
+    font-weight: normal;
+    /*position-type: absolute;*/
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    corner-radius: 4px;
+    border-width: 0.5px;
+    border-color: rgb(100 200 100 / 0.6);
+    shadow: 0px -2px 72px 1px rgb(0 0 0 / 30%);
+    /*max-width: 120%;*/
+    height: auto;
+    translate: 0px -30px;
+    alignment: top-center;
+    background-color: palegreen;
+}
+
+.param-value-label-macos {
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /* Position the fixed 100px readout around the current knob's center. */
+    left: 50%;
+    top: 0px;
+    translate: -50px -62px;
+    alignment: top-left;
+    height: auto;
+
+    /* Static glass treatment: translucent tint, bright rim, and a soft fixed shadow. */
+    corner-radius: 10px;
+    border-width: 1px;
+    border-color: rgb(255 255 255 / 78%);
+    background-color: rgb(218 255 231 / 72%);
+    shadow: 0px 5px 16px 0px rgb(25 90 48 / 22%);
+}
+
+.params-label-macos {
+    background-color: transparent;
+    color: black;
+    transition: background-color 233ms;
+    transition: color 233ms;
+}
+
+.params-label-macos:hover {
+    background-color: transparent;
+    color: black;
+    transition: background-color 233ms;
+    transition: color 233ms;
+}

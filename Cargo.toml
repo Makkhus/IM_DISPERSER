@@ -1,0 +1,27 @@
+[package]
+name = "im_disperser"
+version = "1.0.0"
+edition = "2024"
+license = "GPL-3.0"
+
+[workspace]
+members = ["im_installer","xtask"]
+
+[lib]
+# The `lib` artifact is needed for the standalone target
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+i_am_dsp = { git = "https://github.com/IAMMRGODIE/i_am_dsp", features = ["real_time_demo"] }
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug", features = ["standalone"] }
+vizia_plug = { path = "vizia-plug" }
+atomic_float = "0.1"
+colors-transform = "0.2.11"
+webbrowser = "1.0.6"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+# Export the existing CLAP plugin as an AUv2 component on macOS
+clap-wrapper = { path = "vendor/clap-wrapper", default-features = false, features = ["auv2"] }
+
+[patch."https://github.com/RustAudio/baseview.git"]
+baseview = { git = "https://github.com/john-parton/baseview.git", branch = "bugfix/srgb-not-supported" }
