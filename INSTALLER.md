@@ -56,9 +56,9 @@ Follow the installation prompts. You'll need to enter your admin password.
 
 After creating the `.pkg` file:
 
-1. Go to https://github.com/Makkhus/IMDISPERSER/releases/tag/v0.1.3
+1. Go to https://github.com/Makkhus/IM_DISPERSER/releases/tag/v1.0.0
 2. Click "Edit release"
-3. Drag and drop `IM_DISPERSER-v0.1.3-macOS.pkg` to the assets section
+3. Drag and drop `IM_DISPERSER-v1.0.0-macOS-arm64.pkg` to the assets section
 4. Click "Update release"
 
 ## Troubleshooting
@@ -100,4 +100,4 @@ Signed packages won't show security warnings to users.
 
 ---
 
-**Questions?** Open an issue at https://github.com/Makkhus/IMDISPERSER/issues
+**Questions?** Open an issue at https://github.com/Makkhus/IM_DISPERSER/issues

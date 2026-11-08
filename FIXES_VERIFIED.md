@@ -1,4 +1,4 @@
-# ✅ Bug Fixes Verification - IMDISPERSER v0.1.3
+# ✅ Bug Fixes Verification - IM_DISPERSER v1.0.0
 
 This document confirms that all bug fixes are present in the current codebase.
 
@@ -157,5 +157,5 @@ The repository now contains:
 ---
 
 **Verified**: November 8, 2026  
-**Version**: 0.1.3  
-**Repository**: https://github.com/Makkhus/IMDISPERSER
+**Version**: 1.0.0  
+**Repository**: https://github.com/Makkhus/IM_DISPERSER

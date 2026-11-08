@@ -71,7 +71,7 @@ This release addresses several critical bugs from the original macOS build:
 
 ## Installation
 
-1. Download the latest **IM_DISPERSER-v1.0.0-macOS-arm64.pkg** installer from [Releases](https://github.com/Makkhus/IMDISPERSER/releases/latest)
+1. Download the latest **IM_DISPERSER-v1.0.0-macOS-arm64.pkg** installer from [Releases](https://github.com/Makkhus/IM_DISPERSER/releases/latest)
 2. Double-click the installer and follow the prompts
 3. Restart your DAW and rescan plugins
 
@@ -111,7 +111,7 @@ This software is free and open source. See [LICENSE](LICENSE) for details.
 
 ## Support
 
-For bug reports and feature requests, please open an issue on [GitHub](https://github.com/Makkhus/IMDISPERSER/issues).
+For bug reports and feature requests, please open an issue on [GitHub](https://github.com/Makkhus/IM_DISPERSER/issues).
 
 ---
 
